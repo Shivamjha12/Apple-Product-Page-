@@ -1,0 +1,44 @@
+
+:root{
+  --black: #161617;
+  --lightBlack: #313131;
+  --lightGrey: #F2F2F2;
+  --grey: #8e8e8f;
+  --blue: #0071e3;
+  --white: #fafafc;
+}
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+.carouselbutton{
+  height: 0.75rem;
+  background-color: var(--grey);
+  border: none;
+  border-radius: 50%;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+}
+/* .carouselbutton{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-right: 10px;
+} */
+.carouselbuttoncurrent{
+  height: 0.75rem;
+  background-color: var(--lightBlack);
+  border: none;
+  border-radius: 50%;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+}
+.carouselbuttonlist{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+}
+.carouselstepbutton{
+  top: 50%;
+  right: calc(50% - var(--gallery-width)/2 + 18px);
+}
