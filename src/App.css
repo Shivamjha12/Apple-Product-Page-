@@ -38,7 +38,97 @@
       margin: 0;
       display: flex;
 }
+.stepbutton{
+  margin: 0rem 0rem 0rem 0rem;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+}
 .carouselstepbutton{
+  position: absolute;
   top: 50%;
   right: calc(50% - var(--gallery-width)/2 + 18px);
+  /* background-color: rgba(210,210,215,.64); */
+  background-color: rgba(210,210,215,.64); 
+  color: rgba(0,0,0,.56);
+  font-weight: 300;
+  width: 3.05882rem;
+  height: 3.05882rem;
+  border-radius: 3.05882rem;
+  font-size: 53px;
+  line-height: 3.05882rem;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  margin: 10rem 0rem 0rem 2rem;
+}
+.carouselsteprightbutton{
+  position: absolute;
+  top: 50%;
+  /* right: calc(50% - var(--gallery-width)/2 + 18px); */
+  /* background-color: rgba(210,210,215,.64); */
+  background-color: rgba(210,210,215,.64);
+  margin: 10rem 0rem 0rem 40rem; 
+  color: rgba(0,0,0,.56);
+  font-weight: 300;
+  width: 3.05882rem;
+  height: 3.05882rem;
+  border-radius: 3.05882rem;
+  font-size: 53px;
+  line-height: 3.05882rem;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+.carouselstepbutton:hover{
+  background-color: rgb(222 222 226);
+ 
+}
+.arrowLeftIcon{
+  position: relative;
+  height: 1.50rem;
+  width: 1.50rem;
+  margin: 0rem 0.4rem 0.43rem 0.13rem;
+}
+.arrowRightIcon{
+  position: relative;
+  height: 1.50rem;
+  width: 1.50rem;
+  margin: 0rem 0.4rem 0.43rem 0.55rem;
+}
+
+.carouselMain{
+  height: 100%;
+  width: 100%;
+  max-height: 1200px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* overflow: hidden; */
+}
+.carouselImages{
+  height: 20rem;
+  width: 40rem;
+}
+.carouselImage{
+  height: 25rem;
+  width: 45rem;
+}
+.carouselbuttonlistmain{
+  position: absolute;
+  top: 50%;
+  margin: 10rem 0rem 0rem 19.5rem; 
+  color: rgba(0,0,0,.56);
+  font-weight: 300;
+  width: 3.05882rem;
+  height: 3.05882rem;
+  border-radius: 3.05882rem;
+  font-size: 53px;
+  line-height: 3.05882rem;
+  border: none;
+
+  z-index: 1;
 }

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import CarouselButton from './ImageCarouselButton';
 import CarouselStepButton from './imageCarouselStepButton';
 const Carousel = ({Images})=> {
@@ -12,10 +12,24 @@ const Carousel = ({Images})=> {
         setCurrentImage(ImagesArr[index]);
         setCurrentIndex(index);
     }
+    useEffect(()=>{
+        if(currentIndex===0){
+            setIsLeftButton(false);
+            setIsRightButton(true);
+        } else if(currentIndex===ImagesArr.length-1){
+            setIsRightButton(false);
+            setIsLeftButton(true);
+        } else if(currentIndex!==0){
+            setIsLeftButton(true);
+        } else {
+            setIsRightButton(true);
+        }
+    },[currentIndex]);
     function leftCarousel(){
         if(currentIndex===0){
             setIsLeftButton(false);
         } else{
+            setIsRightButton(true);
             const calculatedIndex=(currentIndex-1)%ImagesArr.length;
             setCurrentImage(ImagesArr[calculatedIndex]);
             setCurrentIndex(calculatedIndex);
@@ -25,6 +39,7 @@ const Carousel = ({Images})=> {
         if(currentIndex===ImagesArr.length-1){
             setIsRightButton(false);
         } else {
+            setIsLeftButton(true);
             const calculatedIndex=(currentIndex+1)%ImagesArr.length;
             setCurrentImage(ImagesArr[calculatedIndex]);
             setCurrentIndex(calculatedIndex);
@@ -33,14 +48,19 @@ const Carousel = ({Images})=> {
     return(
         <div className="carouselMain">
             <div className="carouselImages">
-                <img src={currentImage} alt={currentImage}/>
-                <ul className="carouselbuttonlist">
-                {ImagesArr.map((value,index)=>(
-
-                    <CarouselButton key={index} currentIndex={currentIndex} onImageChange={changeImage} Index={index}/>
-                ))}
-                </ul>
-                <CarouselStepButton onClickHandler={leftCarousel} />
+            <div className="stepbutton">  
+            {isLeftButton===true?(<CarouselStepButton mode={'left'} onClickHandler={leftCarousel}/>):(<></>)}
+            {isRightButton===true?(<CarouselStepButton mode={'right'} onClickHandler={rightCarousel}/>):(<></>)}
+            </div>
+            <img className="carouselImage" src={currentImage} alt={currentImage}/>
+            <div className="carouselbuttonlistmain">
+            <ul className="carouselbuttonlist">
+            {ImagesArr.map((value,index)=>(
+                <CarouselButton key={index} currentIndex={currentIndex} onImageChange={changeImage} Index={index}/>
+            ))}
+            </ul>
+            </div>
+                
             </div>
         </div>
     );
