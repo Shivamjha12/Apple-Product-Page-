@@ -1,4 +1,4 @@
-
+/* Global Styles and variables */
 :root{
   --black: #161617;
   --lightBlack: #313131;
@@ -6,12 +6,21 @@
   --grey: #8e8e8f;
   --blue: #0071e3;
   --white: #fafafc;
+  --highligh-yellow: #e09300;
 }
 @font-face {
   font-family: "San Francisco";
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
+
+body {
+  font-family: "San Francisco", Arial, sans-serif;
+}
+
+
+/* Carousel Component Related CSS */
+
 .carouselbutton{
   height: 0.75rem;
   background-color: var(--grey);
@@ -99,15 +108,16 @@
 }
 
 .carouselMain{
-  height: 100%;
-  width: 100%;
-  max-height: 1200px;
-  border-radius: 18px;
+  height: auto;
+  width: auto;
+  /* max-height: 1200px; */
+  border-radius: 15px;
+  /* border: 1px solid var(--black); */
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .carouselImages{
   height: 20rem;
@@ -120,7 +130,7 @@
 .carouselbuttonlistmain{
   position: absolute;
   top: 50%;
-  margin: 10rem 0rem 0rem 19.5rem; 
+  margin: 6.5rem 0rem 0rem 19.5rem; 
   color: rgba(0,0,0,.56);
   font-weight: 300;
   width: 3.05882rem;
@@ -131,4 +141,40 @@
   border: none;
 
   z-index: 1;
+}
+
+/* Header Component Related CSS */
+
+.headerLogo{
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+}
+.headerMain{
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.headerList{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap:1.5rem;
+}
+.headerListItem{
+  font-size: 1rem;
+  font-weight: 550;
+  font: bolD;
+  color: var(--lightBlack);
+  
+  cursor: pointer;
+}
+.svgIcon{
+  height: 2rem;
+  width: 2rem;
+  margin: -0.7rem 0rem 0rem 0rem;
 }
