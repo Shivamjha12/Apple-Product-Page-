@@ -6,7 +6,7 @@
   --grey: #8e8e8f;
   --blue: #0071e3;
   --white: #fafafc;
-  --highligh-yellow: #e09300;
+  --highligh-yellow: #c48003;
 }
 @font-face {
   font-family: "San Francisco";
@@ -109,7 +109,7 @@ body {
 
 .carouselMain{
   height: auto;
-  width: auto;
+  width: 50rem;
   /* max-height: 1200px; */
   border-radius: 15px;
   /* border: 1px solid var(--black); */
@@ -142,6 +142,12 @@ body {
 
   z-index: 1;
 }
+
+
+
+
+
+
 
 /* Header Component Related CSS */
 
@@ -177,4 +183,107 @@ body {
   height: 2rem;
   width: 2rem;
   margin: -0.7rem 0rem 0rem 0rem;
+}
+
+/* Product Title Component Related CSS */
+.NewTagIconText{
+  color:var(--highligh-yellow);
+  margin: 0.7rem 0rem 0rem 0.2rem;
+  padding: auto;
+}
+.productHeroTitle{
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 0rem 0rem 0rem 0rem;
+}
+.productHeroTitleText{
+  font-size: 3rem;
+  font-weight: 650;
+  font: bold;
+  color: solid var(--lightBlack);
+  margin: 0rem 0rem 0rem 0rem;
+}
+
+
+/* Product Page Related CSS */
+.mainDiv{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
+
+
+.WhatsInsideBoxItemNumber{
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center;
+  /* justify-content: center; */
+  /* flex-direction: column; */
+}
+.WhatsInsideBoxItem{
+  display: flex;
+  /* justify-content: center;*/
+  /* flex-direction: column; */
+}
+
+.WhatsInsideBoxItemText {
+  margin-top: 10px; /* Add space between image and text */
+  text-align: center; /* Center text */
+}
+.WhatsInsideBoxItemMain{
+  display: flex;
+  justify-content: center; 
+  gap: 5rem;
+
+}
+.WhatsInsideBox{
+  justify-content: center;
+}
+.WhatsInsideBoxTitle{
+  display: flex;
+  justify-content: center;
+}
+.productPageLeft{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 50rem;
+  /* margin: 0rem 0rem 0rem 0rem; */
+  /* padding: 1rem 1rem 1rem 1rem; */
+}
+.WhatInsideBoxTitleText{
+  font-size: 2.5rem;
+  font-weight: 900;
+  font: bold;
+  color: solid var(--lightBlack);
+  margin: 4rem 0rem 0rem 0rem;
+}
+.WhatsInsideEnvironmental{
+  display: flex-column;
+  justify-content: center;
+}
+.WhatsInsideEnvironmentalTitle{
+  display: flex;
+  justify-content: center;
+}
+.WhatsInsideEnvironmentalp1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.WhatsInsideEnvironmentalp2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

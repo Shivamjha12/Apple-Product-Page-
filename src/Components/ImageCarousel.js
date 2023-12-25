@@ -2,7 +2,9 @@ import React,{useEffect, useState} from 'react';
 import CarouselButton from './ImageCarouselButton';
 import CarouselStepButton from './imageCarouselStepButton';
 const Carousel = ({Images})=> {
-    const ImagesArr = [...Images];
+    const ApiData = Images.ModelColorAvailable;
+    console.log(ApiData);
+    const ImagesArr = [...ApiData["Blue"].Images];
     const [isLeftButton,setIsLeftButton]=useState(false);
     const [isRightButton,setIsRightButton]=useState(true);
     const [currentImage,setCurrentImage]=useState(ImagesArr[0]);
