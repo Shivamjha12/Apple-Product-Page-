@@ -39,7 +39,6 @@ function App() {
    <div className="mainDiv">
       <div className="productPageLeft">
         <ProductHeroTitle productDetails={ApiData}/>
-        {currentModelColor}
         <div className="productPageMid">
           <div className="productPageMidCarousel">
             { currentModelColor && <Carousel currentColor={currentModelColor} Images={ApiData} />}

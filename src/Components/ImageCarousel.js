@@ -9,13 +9,15 @@ const Carousel = ({currentColor,Images})=> {
     const [isRightButton,setIsRightButton]=useState(true);
     const [currentImage,setCurrentImage]=useState(ImagesArr[0]);
     const [currentIndex,setCurrentIndex]=useState(0);
-
+    const [refreshKey, setRefreshKey] = useState(0);
     function changeImage(index){
-        ImagesArr = [...ApiData[currentColor].Images];
+        setCurrentImage(ImagesArr[index]);
+        setCurrentIndex(index);
     }
     useEffect(()=>{
+        changeImage(0);
+    },[ImagesArr && currentColor]);
 
-    },[currentColor])
     useEffect(()=>{
         if(currentIndex===0){
             setIsLeftButton(false);
@@ -51,13 +53,12 @@ const Carousel = ({currentColor,Images})=> {
     }
     return(
         <div className="carouselMain">
-            {currentColor}
             <div className="carouselImages">
             <div className="stepbutton">  
             {isLeftButton===true?(<CarouselStepButton mode={'left'} onClickHandler={leftCarousel}/>):(<></>)}
             {isRightButton===true?(<CarouselStepButton mode={'right'} onClickHandler={rightCarousel}/>):(<></>)}
             </div>
-            <img className="carouselImage" src={currentImage} alt={currentImage}/>
+            <img key={refreshKey} className="carouselImage" src={currentImage} alt={currentImage}/>
             <div className="carouselbuttonlistmain">
             <ul className="carouselbuttonlist">
             {ImagesArr.map((value,index)=>(

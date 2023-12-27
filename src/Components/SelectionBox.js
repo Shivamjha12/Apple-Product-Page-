@@ -15,7 +15,7 @@ const SelectionBox = ({selectionDetails})=>{
             <div className="selectionBoxTitle">
                 <h2 className="selectionBoxTitleText"><span className="selectionBoxTitleTextFirstword">Model.</span><span className="selectionBoxTitleTextFirstword1"> Which is best for you?</span></h2>
             </div>
-            {currentModel}
+            <h4 className="ModelName" style={{"margin":"0px 0px 0px 20px"}}>{currentModel}</h4>
             <div className="selectionBoxModels">
                 {
                 productModels.map((model)=>{
