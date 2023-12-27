@@ -9,6 +9,15 @@ This project showcases the design and development of the Apple Product Page, foc
 
 The main page is organized into various components, each designed to be modular and reusable. This architectural approach allows for scalability and easy adaptation to feature other Apple products in the future. I took the initiative to create each component from scratch, ensuring a customized and cohesive design.
 
+## Steps to Clone project on your local system
+- **Step 1:** Clone this repository on your local system using the following command
+```git clone https://github.com/Shivamjha12/Apple-Product-Page-.git```
+
+- **Step 2:**  To install all the dependencies run the following command
+```npm install```
+- **Step 3:**  To start the project run the following command
+```npm start```
+
 
 ## Key Features
 
