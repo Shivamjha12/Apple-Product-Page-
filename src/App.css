@@ -228,6 +228,15 @@ body {
   display: flex;
   flex-direction: column;
 }
+.productPageMid{
+  display: flex;
+  gap: 5rem;
+  margin: 0rem 0rem 0rem 30rem;
+}
+.productPageLeft{
+  display:flex-column;
+  
+}
 
 
 
@@ -393,19 +402,17 @@ body {
 } */
 
 /* Css related to Color Picker Component */
-.colorPickerButton{
-  height: 3rem;
-  width: 2rem;
-  border-radius: 50%;
-  /* border: solid 5px #000; */
-  padding: 1rem;
-  cursor: pointer;
-  padding: 10px 20px; /* Adjust the values to set the desired space */
-  border: 4px solid #fff; /* White inner border */ /* Background color */
-  color: #fff; /* Text color */
-  font-size: 16px; /* Font size */
-  box-shadow: 0 0 0 2px var(--blue); /* Blue outer border */
-}
+
 .colorPickerButtonList{
   list-style: none;
+  display: flex;
+}
+
+.colorPickerButtonListMain{
+  display:flex;
+  align-items: flex;
+  gap: 4rem;
+}
+.colorPickerButtonListItem{
+  margin: 0rem 0rem 0rem 0.5rem;
 }

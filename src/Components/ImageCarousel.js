@@ -1,19 +1,21 @@
 import React,{useEffect, useState} from 'react';
 import CarouselButton from './ImageCarouselButton';
 import CarouselStepButton from './imageCarouselStepButton';
-const Carousel = ({Images})=> {
+const Carousel = ({currentColor,Images})=> {
     const ApiData = Images.ModelColorAvailable;
     console.log(ApiData);
-    const ImagesArr = [...ApiData["Blue"].Images];
+    const ImagesArr = [...ApiData[currentColor].Images];
     const [isLeftButton,setIsLeftButton]=useState(false);
     const [isRightButton,setIsRightButton]=useState(true);
     const [currentImage,setCurrentImage]=useState(ImagesArr[0]);
     const [currentIndex,setCurrentIndex]=useState(0);
 
     function changeImage(index){
-        setCurrentImage(ImagesArr[index]);
-        setCurrentIndex(index);
+        ImagesArr = [...ApiData[currentColor].Images];
     }
+    useEffect(()=>{
+
+    },[currentColor])
     useEffect(()=>{
         if(currentIndex===0){
             setIsLeftButton(false);
@@ -49,6 +51,7 @@ const Carousel = ({Images})=> {
     }
     return(
         <div className="carouselMain">
+            {currentColor}
             <div className="carouselImages">
             <div className="stepbutton">  
             {isLeftButton===true?(<CarouselStepButton mode={'left'} onClickHandler={leftCarousel}/>):(<></>)}
