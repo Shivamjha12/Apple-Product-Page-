@@ -92,7 +92,6 @@ body {
 }
 .carouselstepbutton:hover{
   background-color: rgb(222 222 226);
- 
 }
 .arrowLeftIcon{
   position: relative;
@@ -139,7 +138,6 @@ body {
   font-size: 53px;
   line-height: 3.05882rem;
   border: none;
-
   z-index: 1;
 }
 
@@ -223,7 +221,30 @@ body {
 }
 
 
-/* Product Page Related CSS */
+.productPageMidCarousel {
+  /* Add your styles for the mid carousel */
+  transition: transform 0.3s ease-out;
+}
+.productPageRightCarouselFixed{
+  margin: 0rem 0rem 0rem 30rem;
+}
+.productPageMidCarouselFixed {
+  position: fixed;
+  top: 0;
+  /* left: 30%; */
+  margin: 5rem 0rem 4rem -27.4rem;
+  /* transform: translateX(-50%); */
+  /* Add additional styles for the fixed state */
+}
+.midCarouselFixed {
+  margin: 0rem 0rem 0rem 12.5rem;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+
+
+
+
 .mainDiv{
   display: flex;
   flex-direction: column;
@@ -234,8 +255,11 @@ body {
   margin: 0rem 0rem 0rem 30rem;
 }
 .productPageLeft{
-  display:flex-column;
-  
+  display:flex-column; 
+}
+
+.productPageBottom{
+  margin: 0rem -40rem 0rem 10rem;
 }
 
 

@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import Box from './Box';
-const SelectionBox = ({selectionDetails})=>{
+const SelectionBox = ({selectionDetails, onModelChange})=>{
     console.log("here--------------",selectionDetails);
     const models = selectionDetails.models;
     const productModels = selectionDetails.models;
@@ -8,6 +8,7 @@ const SelectionBox = ({selectionDetails})=>{
 
     function changeModel(modelName){
         setCurrentModel(modelName);
+        onModelChange(modelName);
     }
     return(
         <>
